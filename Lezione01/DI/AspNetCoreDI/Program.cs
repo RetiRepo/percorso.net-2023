@@ -1,15 +1,13 @@
-using BackgroundTasks.Tasks;
+using AspNetCoreDI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Registro il mio Periodic Background Task
-builder.Services.AddHostedService<PeriodicHostedService>();
+builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+builder.Services.AddSingleton<IApplicationService, ApplicationService>();
 
 var app = builder.Build();
 

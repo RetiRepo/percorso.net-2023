@@ -1,4 +1,4 @@
-﻿namespace BackgroundTasks
+﻿namespace BackgroundTasks.Tasks
 {
     public class PeriodicHostedService : BackgroundService
     {
