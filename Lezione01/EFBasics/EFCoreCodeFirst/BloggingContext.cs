@@ -11,7 +11,7 @@ namespace EFCoreFirstApp
         public string DbPath { get; }
 
         // Nota: di solito la Connection String viene messa in un file di settings (appsettings.json)
-        public BloggingContext(string connectionString = "Data Source=.;Initial Catalog=blog;Integrated Security=SSPI;MultipleActiveResultSets=True")
+        public BloggingContext(string connectionString = "Data Source=.;Initial Catalog=BlogDB;Integrated Security=SSPI;MultipleActiveResultSets=True")
         {
             DbPath = connectionString;
         }
